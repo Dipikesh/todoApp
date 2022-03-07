@@ -1,0 +1,5 @@
+[31m07/03/2022 20:24:53 - [error] : Can not Connect MongoAPIError: URI must include hostname, domain name, and tld[39m
+[31m07/03/2022 20:31:00 - [error] : Can not Connect MongoAPIError: URI must include hostname, domain name, and tld[39m
+[31m07/03/2022 20:46:39 - [error] : Can not Connect MongoParseError: options usecreateindex, usefindandmodify are not supported[39m
+[31m07/03/2022 20:46:41 - [error] : Can not Connect MongoParseError: options usecreateindex, usefindandmodify are not supported[39m
+[31m07/03/2022 20:46:55 - [error] : Can not Connect MongoAPIError: URI must include hostname, domain name, and tld[39m
