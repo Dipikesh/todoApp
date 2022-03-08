@@ -22,7 +22,7 @@ app.use(express.urlencoded({ extended: true }))
 app.options('*', cors({ origin: '*', optionsSuccessStatus: 200 }))
 app.use(cors({ origin: '*', optionsSuccessStatus: 200 }))
 
-app.use('/', routes)
+app.use('/api', routes)
 
 //Adding Swagger
 
@@ -31,11 +31,14 @@ app.use((req, res, next) => {
 })
 
 app.use((err, req, res, next) => {
-  const errorType = createError.isHttpError(err)
-  if (!errorType) {
+  var errorType = createError.isHttpError(err)
+  var joiError = err.isJoi;
+
+  if (!errorType && !joiError) {
     logger.error(`Programatic Error, Shutting down due to ${err.stack}`)
     process.exit(1)
   }
+  
 
   res.status(err.status || 500)
   res.json({

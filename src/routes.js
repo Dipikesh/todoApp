@@ -5,12 +5,14 @@ router.post('/create', todoControllers.createTodos);
 
 router.put('/update', todoControllers.updateTodos);
 
+router.get('/todos/:id', todoControllers.getTodosById)
+
+
 router.get('/todos',todoControllers.getAllTodos)
 
-router.get('/todos:id', todoControllers.getTodosById);
 
 router.delete('/todos', todoControllers.deleteAllTodos);
 
-router.delete('/todos:id', todoControllers.deleteTodosById);
+router.delete('/todos/:id', todoControllers.deleteTodosById);
 
 module.exports = router;

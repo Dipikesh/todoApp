@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 const createError = require('http-errors')
 
-const schema = mongoose.createSchema({
+
+const schema = mongoose.Schema({
     name: {
         type: String,
         required: true

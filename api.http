@@ -1,0 +1,50 @@
+POST http://localhost:8000/api/create HTTP/1.1
+Content-Type: application/json
+
+{
+    "name":"New tdod",
+    "description":"Needed to complete the creation"
+}
+###
+GET http://localhost:8000/api/todos HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+###
+
+GET http://localhost:8000/api/todos/6226dfbb96eacd0baec2262b HTTP/1.1
+Content-Type: application/json
+
+{
+    
+}
+
+###
+
+PUT http://localhost:8000/api/update HTTP/1.1
+Content-Type: application/json
+
+{
+    "id":"6226dfbb96eacd0baec2262b",
+    "name":"Updated Todo",
+    "description":"Updating to check the status of update"
+}
+
+###
+
+DELETE http://localhost:8000/api/todos HTTP/1.1
+Content-Type: application/json
+
+{
+
+}
+###
+
+DELETE http://localhost:8000/api/todos/6226ffc9bdbac279c8965814 HTTP/1.1
+Content-Type: application/json
+
+{
+
+}
