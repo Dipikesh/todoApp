@@ -14,17 +14,16 @@ require(`dotenv`).config()
 require('./config/conn');
 
 //To which origin , you want to share your resources
+app.options('*', cors({ origin: '*', optionsSuccessStatus: 200 }))
+app.use(cors({ origin: '*', optionsSuccessStatus: 200 }))
 
 app.use(httpLogger)
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 
-app.options('*', cors({ origin: '*', optionsSuccessStatus: 200 }))
-app.use(cors({ origin: '*', optionsSuccessStatus: 200 }))
+
 
 app.use('/api', routes)
-
-//Adding Swagger
 
 app.use((req, res, next) => {
   next(createError.NotFound())
